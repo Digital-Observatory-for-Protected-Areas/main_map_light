@@ -784,10 +784,10 @@ if (classname=='news'){
           'fill-color': {
             property: 'prot_perc_ind', 
             stops: [
-              [0, '#c51b7d'],
-              [1, '#de77ae'],
-              [2, '#f1b6da'],
-              [5, '#fde0ef'],
+              [0, '#08306b'],
+              [1, '#2171b5'],
+              [2, '#6baed6'],
+              [5, '#c6dbef'],
               [8, '#f7f7f7'],
               [12, '#e6f5d0'],
               [17, '#b8e186'],
@@ -831,10 +831,10 @@ if (classname=='news'){
         'fill-color': {
           property: 'protection', 
           stops: [
-            [0, '#c51b7d'],
-            [1, '#de77ae'],
-            [2, '#f1b6da'],
-            [5, '#fde0ef'],
+            [0, '#08306b'],
+            [1, '#2171b5'],
+            [2, '#6baed6'],
+            [5, '#c6dbef'],
             [8, '#f7f7f7'],
             [12, '#e6f5d0'],
             [17, '#b8e186'],
@@ -872,13 +872,13 @@ layer_country.addEventListener('change', function() {
     map.setFilter("dopa_geoserver_global_dash", [">", "prot_mar_perc_ind", 0]);
     map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
     ['interpolate',['linear'],['get', layer_country_value],
-    0, '#c51b7d',0.5, '#de77ae',1, '#f1b6da',2, '#fde0ef',5, '#f7f7f7',8, '#e6f5d0',12, '#b8e186',17, '#7fbc41',30, '#4d9221',
+    0, '#08306b',0.5, '#2171b5',1, '#6baed6',2, '#c6dbef',5, '#f7f7f7',8, '#e6f5d0',12, '#b8e186',17, '#7fbc41',30, '#4d9221',
   ]);
   $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Marine Protection</p>"+
-  "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-  "<div><span class='square_pa'style='background-color: #de77ae'></span>0,5%</div>"+
-  "<div><span class='square_pa'style='background-color: #f1b6da'></span>1%</div>"+
-  "<div><span class='square_pa'style='background-color: #fde0ef'></span>2%</div>"+
+  "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+  "<div><span class='square_pa'style='background-color: #2171b5'></span>0,5%</div>"+
+  "<div><span class='square_pa'style='background-color: #6baed6'></span>1%</div>"+
+  "<div><span class='square_pa'style='background-color: #c6dbef'></span>2%</div>"+
   "<div><span class='square_pa'style='background-color: #f7f7f7'></span>5%</div>"+
   "<div><span class='square_pa'style='background-color: #e6f5d0'></span>8%</div>"+
   "<div><span class='square_pa'style='background-color: #b8e186'></span>12%</div>"+
@@ -892,13 +892,13 @@ layer_country.addEventListener('change', function() {
   map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
     map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
     ['interpolate',['linear'],['get', layer_country_value],
-    0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
+    0, '#08306b',1, '#2171b5',2, '#6baed6',5, '#c6dbef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
   ]);
   $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Terrestrial Protection</p>"+
-  "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-  "<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-  "<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-  "<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+  "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+  "<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+  "<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+  "<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
   "<div><span class='square_pa'style='background-color: #f7f7f7'></span>8%</div>"+
   "<div><span class='square_pa'style='background-color: #e6f5d0'></span>12%</div>"+
   "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
@@ -910,13 +910,13 @@ layer_country.addEventListener('change', function() {
     map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
       map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
       ['interpolate',['linear'],['get', layer_country_value],
-      0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
+      0, '#08306b',1, '#2171b5',2, '#6baed6',5, '#c6dbef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
     ]);
     $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Terrestrial Connectivity</p>"+
-    "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-    "<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-    "<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-    "<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+    "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+    "<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+    "<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+    "<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
     "<div><span class='square_pa'style='background-color: #f7f7f7'></span>8%</div>"+
     "<div><span class='square_pa'style='background-color: #e6f5d0'></span>12%</div>"+
     "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
@@ -928,13 +928,13 @@ layer_country.addEventListener('change', function() {
       map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
         map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
         ['interpolate',['linear'],['get', layer_country_value],
-        0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
+        0, '#08306b',1, '#2171b5',2, '#6baed6',5, '#c6dbef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
       ]);
       $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Overall Protection</p>"+
-      "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-      "<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-      "<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-      "<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+      "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+      "<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+      "<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+      "<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
       "<div><span class='square_pa'style='background-color: #f7f7f7'></span>8%</div>"+
       "<div><span class='square_pa'style='background-color: #e6f5d0'></span>12%</div>"+
       "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
@@ -946,13 +946,13 @@ layer_country.addEventListener('change', function() {
         map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
           map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
           ['interpolate',['linear'],['get', layer_country_value],
-          0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#4d9221',50, '#4d9221',
+          0, '#08306b',1, '#2171b5',2, '#6baed6',5, '#c6dbef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#4d9221',50, '#4d9221',
         ]);
         $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Forest Cover</p>"+
-        "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-        "<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-        "<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-        "<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+        "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+        "<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+        "<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+        "<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
         "<div><span class='square_pa'style='background-color: #f7f7f7'></span>8%</div>"+
         "<div><span class='square_pa'style='background-color: #e6f5d0'></span>12%</div>"+
         "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
@@ -964,13 +964,13 @@ layer_country.addEventListener('change', function() {
           map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
             map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
             ['interpolate',['linear'],['get', layer_country_value],
-            0, '#c51b7d',0.2, '#de77ae',0.4, '#f1b6da',0.6, '#fde0ef',0.8, '#f7f7f7',1, '#e6f5d0',1.2, '#b8e186',1.4, '#7fbc41',2, '#4d9221',
+            0, '#08306b',0.2, '#2171b5',0.4, '#6baed6',0.6, '#c6dbef',0.8, '#f7f7f7',1, '#e6f5d0',1.2, '#b8e186',1.4, '#7fbc41',2, '#4d9221',
           ]);
           $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Forest Gain</p>"+
-          "<div><span class='square_pa'style='background-color: #c51b7d'></span>0.0%</div>"+
-          "<div><span class='square_pa'style='background-color: #de77ae'></span>0.2%</div>"+
-          "<div><span class='square_pa'style='background-color: #f1b6da'></span>0.4%</div>"+
-          "<div><span class='square_pa'style='background-color: #fde0ef'></span>0.6%</div>"+
+          "<div><span class='square_pa'style='background-color: #08306b'></span>0.0%</div>"+
+          "<div><span class='square_pa'style='background-color: #2171b5'></span>0.2%</div>"+
+          "<div><span class='square_pa'style='background-color: #6baed6'></span>0.4%</div>"+
+          "<div><span class='square_pa'style='background-color: #c6dbef'></span>0.6%</div>"+
           "<div><span class='square_pa'style='background-color: #f7f7f7'></span>0.8%</div>"+
           "<div><span class='square_pa'style='background-color: #e6f5d0'></span>1.0%</div>"+
           "<div><span class='square_pa'style='background-color: #b8e186'></span>1.2%</div>"+
@@ -982,13 +982,13 @@ layer_country.addEventListener('change', function() {
             map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
               map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
               ['interpolate',['linear'],['get', layer_country_value],
-              0, '#c51b7d',1, '#de77ae',2, '#f1b6da',3, '#fde0ef',4, '#f7f7f7',5, '#e6f5d0',6, '#b8e186',7, '#7fbc41',8, '#4d9221',
+              0, '#08306b',1, '#2171b5',2, '#6baed6',3, '#c6dbef',4, '#f7f7f7',5, '#e6f5d0',6, '#b8e186',7, '#7fbc41',8, '#4d9221',
             ]);
             $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Forest Loss</p>"+
-            "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-            "<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-            "<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-            "<div><span class='square_pa'style='background-color: #fde0ef'></span>3%</div>"+
+            "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+            "<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+            "<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+            "<div><span class='square_pa'style='background-color: #c6dbef'></span>3%</div>"+
             "<div><span class='square_pa'style='background-color: #f7f7f7'></span>4%</div>"+
             "<div><span class='square_pa'style='background-color: #e6f5d0'></span>5%</div>"+
             "<div><span class='square_pa'style='background-color: #b8e186'></span>6%</div>"+
@@ -1000,13 +1000,13 @@ layer_country.addEventListener('change', function() {
               map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                 map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                 ['interpolate',['linear'],['get', layer_country_value],
-                -10, '#c51b7d',-5, '#de77ae',0, '#f1b6da',5, '#fde0ef',10, '#f7f7f7',15, '#e6f5d0',20, '#b8e186',25, '#7fbc41',30, '#4d9221',
+                -10, '#08306b',-5, '#2171b5',0, '#6baed6',5, '#c6dbef',10, '#f7f7f7',15, '#e6f5d0',20, '#b8e186',25, '#7fbc41',30, '#4d9221',
               ]);
               $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Surface Water Change</p>"+
-              "<div><span class='square_pa'style='background-color: #c51b7d'></span>-10%</div>"+
-              "<div><span class='square_pa'style='background-color: #de77ae'></span>-5%</div>"+
-              "<div><span class='square_pa'style='background-color: #f1b6da'></span>0%</div>"+
-              "<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+              "<div><span class='square_pa'style='background-color: #08306b'></span>-10%</div>"+
+              "<div><span class='square_pa'style='background-color: #2171b5'></span>-5%</div>"+
+              "<div><span class='square_pa'style='background-color: #6baed6'></span>0%</div>"+
+              "<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
               "<div><span class='square_pa'style='background-color: #f7f7f7'></span>10%</div>"+
               "<div><span class='square_pa'style='background-color: #e6f5d0'></span>15%</div>"+
               "<div><span class='square_pa'style='background-color: #b8e186'></span>20%</div>"+
@@ -1018,13 +1018,13 @@ layer_country.addEventListener('change', function() {
                 map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                   map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                   ['interpolate',['linear'],['get', layer_country_value],
-                  0, '#c51b7d',0.5, '#de77ae',1, '#f1b6da',1.5, '#fde0ef',2, '#f7f7f7',2.5, '#e6f5d0',3, '#b8e186',4, '#7fbc41',5, '#4d9221',
+                  0, '#08306b',0.5, '#2171b5',1, '#6baed6',1.5, '#c6dbef',2, '#f7f7f7',2.5, '#e6f5d0',3, '#b8e186',4, '#7fbc41',5, '#4d9221',
                 ]);
                 $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Total Carbon (Pg)</p>"+
-                "<div><span class='square_pa'style='background-color: #c51b7d'></span>0</div>"+
-                "<div><span class='square_pa'style='background-color: #de77ae'></span>0.5</div>"+
-                "<div><span class='square_pa'style='background-color: #f1b6da'></span>1</div>"+
-                "<div><span class='square_pa'style='background-color: #fde0ef'></span>1.5</div>"+
+                "<div><span class='square_pa'style='background-color: #08306b'></span>0</div>"+
+                "<div><span class='square_pa'style='background-color: #2171b5'></span>0.5</div>"+
+                "<div><span class='square_pa'style='background-color: #6baed6'></span>1</div>"+
+                "<div><span class='square_pa'style='background-color: #c6dbef'></span>1.5</div>"+
                 "<div><span class='square_pa'style='background-color: #f7f7f7'></span>2</div>"+
                 "<div><span class='square_pa'style='background-color: #e6f5d0'></span>2.5</div>"+
                 "<div><span class='square_pa'style='background-color: #b8e186'></span>3</div>"+
@@ -1036,13 +1036,13 @@ layer_country.addEventListener('change', function() {
                   map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                     map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                     ['interpolate',['linear'],['get', layer_country_value],
-                    0, '#c51b7d',250, '#de77ae',500, '#f1b6da',1000, '#fde0ef',1500, '#f7f7f7',2000, '#e6f5d0',3000, '#b8e186',4000, '#7fbc41',5000, '#4d9221',
+                    0, '#08306b',250, '#2171b5',500, '#6baed6',1000, '#c6dbef',1500, '#f7f7f7',2000, '#e6f5d0',3000, '#b8e186',4000, '#7fbc41',5000, '#4d9221',
                   ]);
                   $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Number of Species</p>"+
-                  "<div><span class='square_pa'style='background-color: #c51b7d'></span>0</div>"+
-                  "<div><span class='square_pa'style='background-color: #de77ae'></span>250</div>"+
-                  "<div><span class='square_pa'style='background-color: #f1b6da'></span>500</div>"+
-                  "<div><span class='square_pa'style='background-color: #fde0ef'></span>1000</div>"+
+                  "<div><span class='square_pa'style='background-color: #08306b'></span>0</div>"+
+                  "<div><span class='square_pa'style='background-color: #2171b5'></span>250</div>"+
+                  "<div><span class='square_pa'style='background-color: #6baed6'></span>500</div>"+
+                  "<div><span class='square_pa'style='background-color: #c6dbef'></span>1000</div>"+
                   "<div><span class='square_pa'style='background-color: #f7f7f7'></span>1500</div>"+
                   "<div><span class='square_pa'style='background-color: #e6f5d0'></span>2000</div>"+
                   "<div><span class='square_pa'style='background-color: #b8e186'></span>3000</div>"+
@@ -1054,13 +1054,13 @@ layer_country.addEventListener('change', function() {
                     map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                       map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                       ['interpolate',['linear'],['get', layer_country_value],
-                      0, '#c51b7d',10, '#de77ae',25, '#f1b6da',50, '#fde0ef',100, '#f7f7f7',150, '#e6f5d0',200, '#b8e186',500, '#7fbc41',1000, '#4d9221',
+                      0, '#08306b',10, '#2171b5',25, '#6baed6',50, '#c6dbef',100, '#f7f7f7',150, '#e6f5d0',200, '#b8e186',500, '#7fbc41',1000, '#4d9221',
                     ]);
                     $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Number of Endemic Species</p>"+
-                    "<div><span class='square_pa'style='background-color: #c51b7d'></span>0</div>"+
-                    "<div><span class='square_pa'style='background-color: #de77ae'></span>10</div>"+
-                    "<div><span class='square_pa'style='background-color: #f1b6da'></span>25</div>"+
-                    "<div><span class='square_pa'style='background-color: #fde0ef'></span>50</div>"+
+                    "<div><span class='square_pa'style='background-color: #08306b'></span>0</div>"+
+                    "<div><span class='square_pa'style='background-color: #2171b5'></span>10</div>"+
+                    "<div><span class='square_pa'style='background-color: #6baed6'></span>25</div>"+
+                    "<div><span class='square_pa'style='background-color: #c6dbef'></span>50</div>"+
                     "<div><span class='square_pa'style='background-color: #f7f7f7'></span>100</div>"+
                     "<div><span class='square_pa'style='background-color: #e6f5d0'></span>150</div>"+
                     "<div><span class='square_pa'style='background-color: #b8e186'></span>200</div>"+
@@ -1072,13 +1072,13 @@ layer_country.addEventListener('change', function() {
                       map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                         map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                         ['interpolate',['linear'],['get', layer_country_value],
-                        0, '#c51b7d',5, '#de77ae',10, '#f1b6da',20, '#fde0ef',40, '#f7f7f7',60, '#e6f5d0',100, '#b8e186',200, '#7fbc41',300, '#4d9221',
+                        0, '#08306b',5, '#2171b5',10, '#6baed6',20, '#c6dbef',40, '#f7f7f7',60, '#e6f5d0',100, '#b8e186',200, '#7fbc41',300, '#4d9221',
                       ]);
                       $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Number of Threatened Species</p>"+
-                      "<div><span class='square_pa'style='background-color: #c51b7d'></span>0</div>"+
-                      "<div><span class='square_pa'style='background-color: #de77ae'></span>5</div>"+
-                      "<div><span class='square_pa'style='background-color: #f1b6da'></span>10</div>"+
-                      "<div><span class='square_pa'style='background-color: #fde0ef'></span>20</div>"+
+                      "<div><span class='square_pa'style='background-color: #08306b'></span>0</div>"+
+                      "<div><span class='square_pa'style='background-color: #2171b5'></span>5</div>"+
+                      "<div><span class='square_pa'style='background-color: #6baed6'></span>10</div>"+
+                      "<div><span class='square_pa'style='background-color: #c6dbef'></span>20</div>"+
                       "<div><span class='square_pa'style='background-color: #f7f7f7'></span>40</div>"+
                       "<div><span class='square_pa'style='background-color: #e6f5d0'></span>60</div>"+
                       "<div><span class='square_pa'style='background-color: #b8e186'></span>100</div>"+
@@ -1090,13 +1090,13 @@ layer_country.addEventListener('change', function() {
                         map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                           map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                           ['interpolate',['linear'],['get', layer_country_value],
-                          0, '#c51b7d',5, '#de77ae',10, '#f1b6da',20, '#fde0ef',40, '#f7f7f7',60, '#e6f5d0',100, '#b8e186',200, '#7fbc41',300, '#4d9221',
+                          0, '#08306b',5, '#2171b5',10, '#6baed6',20, '#c6dbef',40, '#f7f7f7',60, '#e6f5d0',100, '#b8e186',200, '#7fbc41',300, '#4d9221',
                         ]);
                         $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Number of Threatened Endemic Species</p>"+
-                        "<div><span class='square_pa'style='background-color: #c51b7d'></span>0</div>"+
-                        "<div><span class='square_pa'style='background-color: #de77ae'></span>5</div>"+
-                        "<div><span class='square_pa'style='background-color: #f1b6da'></span>10</div>"+
-                        "<div><span class='square_pa'style='background-color: #fde0ef'></span>20</div>"+
+                        "<div><span class='square_pa'style='background-color: #08306b'></span>0</div>"+
+                        "<div><span class='square_pa'style='background-color: #2171b5'></span>5</div>"+
+                        "<div><span class='square_pa'style='background-color: #6baed6'></span>10</div>"+
+                        "<div><span class='square_pa'style='background-color: #c6dbef'></span>20</div>"+
                         "<div><span class='square_pa'style='background-color: #f7f7f7'></span>40</div>"+
                         "<div><span class='square_pa'style='background-color: #e6f5d0'></span>60</div>"+
                         "<div><span class='square_pa'style='background-color: #b8e186'></span>100</div>"+
@@ -1108,13 +1108,13 @@ layer_country.addEventListener('change', function() {
                           map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                             map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                             ['interpolate',['linear'],['get', layer_country_value],
-                            0, '#c51b7d',10000000, '#de77ae',20000000, '#f1b6da',50000000, '#fde0ef',100000000, '#f7f7f7',250000000, '#e6f5d0',500000000, '#b8e186',750000000, '#7fbc41',1000000000, '#4d9221',
+                            0, '#08306b',10000000, '#2171b5',20000000, '#6baed6',50000000, '#c6dbef',100000000, '#f7f7f7',250000000, '#e6f5d0',500000000, '#b8e186',750000000, '#7fbc41',1000000000, '#4d9221',
                           ]);
                           $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Total Population </p>"+
-                          "<div><span class='square_pa'style='background-color: #c51b7d'></span>0M</div>"+
-                          "<div><span class='square_pa'style='background-color: #de77ae'></span>10M</div>"+
-                          "<div><span class='square_pa'style='background-color: #f1b6da'></span>20M</div>"+
-                          "<div><span class='square_pa'style='background-color: #fde0ef'></span>50M</div>"+
+                          "<div><span class='square_pa'style='background-color: #08306b'></span>0M</div>"+
+                          "<div><span class='square_pa'style='background-color: #2171b5'></span>10M</div>"+
+                          "<div><span class='square_pa'style='background-color: #6baed6'></span>20M</div>"+
+                          "<div><span class='square_pa'style='background-color: #c6dbef'></span>50M</div>"+
                           "<div><span class='square_pa'style='background-color: #f7f7f7'></span>100M</div>"+
                           "<div><span class='square_pa'style='background-color: #e6f5d0'></span>250M</div>"+
                           "<div><span class='square_pa'style='background-color: #b8e186'></span>500M</div>"+
@@ -1126,13 +1126,13 @@ layer_country.addEventListener('change', function() {
                             map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                               map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                               ['interpolate',['linear'],['get', layer_country_value],
-                              0, '#c51b7d',10, '#de77ae',25, '#f1b6da',50, '#fde0ef',75, '#f7f7f7',100, '#e6f5d0',150, '#b8e186',200, '#7fbc41',250, '#4d9221',
+                              0, '#08306b',10, '#2171b5',25, '#6baed6',50, '#c6dbef',75, '#f7f7f7',100, '#e6f5d0',150, '#b8e186',200, '#7fbc41',250, '#4d9221',
                             ]);
                             $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Population Density</p>"+
-                            "<div><span class='square_pa'style='background-color: #c51b7d'></span>0 per km<sup>2</sup></div>"+
-                            "<div><span class='square_pa'style='background-color: #de77ae'></span>10 per km<sup>2</sup></div>"+
-                            "<div><span class='square_pa'style='background-color: #f1b6da'></span>25 per km<sup>2</sup></div>"+
-                            "<div><span class='square_pa'style='background-color: #fde0ef'></span>50 per km<sup>2</sup></div>"+
+                            "<div><span class='square_pa'style='background-color: #08306b'></span>0 per km<sup>2</sup></div>"+
+                            "<div><span class='square_pa'style='background-color: #2171b5'></span>10 per km<sup>2</sup></div>"+
+                            "<div><span class='square_pa'style='background-color: #6baed6'></span>25 per km<sup>2</sup></div>"+
+                            "<div><span class='square_pa'style='background-color: #c6dbef'></span>50 per km<sup>2</sup></div>"+
                             "<div><span class='square_pa'style='background-color: #f7f7f7'></span>75 per km<sup>2</sup></div>"+
                             "<div><span class='square_pa'style='background-color: #e6f5d0'></span>100 per km<sup>2</sup></div>"+
                             "<div><span class='square_pa'style='background-color: #b8e186'></span>150 per km<sup>2</sup></div>"+
@@ -1144,13 +1144,13 @@ layer_country.addEventListener('change', function() {
                               map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                                 map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                                 ['interpolate',['linear'],['get', layer_country_value],
-                                -2, '#c51b7d',-1.5, '#de77ae',-1, '#f1b6da',0, '#fde0ef',1, '#f7f7f7',1.5, '#e6f5d0',2, '#b8e186',2.5, '#7fbc41',3, '#4d9221',
+                                -2, '#08306b',-1.5, '#2171b5',-1, '#6baed6',0, '#c6dbef',1, '#f7f7f7',1.5, '#e6f5d0',2, '#b8e186',2.5, '#7fbc41',3, '#4d9221',
                               ]);
                               $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Population Growth</p>"+
-                              "<div><span class='square_pa'style='background-color: #c51b7d'></span>-2% or less</div>"+
-                              "<div><span class='square_pa'style='background-color: #de77ae'></span>-1.5%</div>"+
-                              "<div><span class='square_pa'style='background-color: #f1b6da'></span>-1%</div>"+
-                              "<div><span class='square_pa'style='background-color: #fde0ef'></span>0%</div>"+
+                              "<div><span class='square_pa'style='background-color: #08306b'></span>-2% or less</div>"+
+                              "<div><span class='square_pa'style='background-color: #2171b5'></span>-1.5%</div>"+
+                              "<div><span class='square_pa'style='background-color: #6baed6'></span>-1%</div>"+
+                              "<div><span class='square_pa'style='background-color: #c6dbef'></span>0%</div>"+
                               "<div><span class='square_pa'style='background-color: #f7f7f7'></span>1%</div>"+
                               "<div><span class='square_pa'style='background-color: #e6f5d0'></span>1.5%</div>"+
                               "<div><span class='square_pa'style='background-color: #b8e186'></span>2%</div>"+
@@ -1162,13 +1162,13 @@ layer_country.addEventListener('change', function() {
                                 map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                                   map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                                   ['interpolate',['linear'],['get', layer_country_value],
-                                  0, '#c51b7d',5, '#de77ae',10, '#f1b6da',20, '#fde0ef',30, '#f7f7f7',40, '#e6f5d0',50, '#b8e186',60, '#7fbc41',70, '#4d9221',
+                                  0, '#08306b',5, '#2171b5',10, '#6baed6',20, '#c6dbef',30, '#f7f7f7',40, '#e6f5d0',50, '#b8e186',60, '#7fbc41',70, '#4d9221',
                                 ]);
                                 $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Agricultiural Lands (% of land area)</p>"+
-                                "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-                                "<div><span class='square_pa'style='background-color: #de77ae'></span>5%</div>"+
-                                "<div><span class='square_pa'style='background-color: #f1b6da'></span>10%</div>"+
-                                "<div><span class='square_pa'style='background-color: #fde0ef'></span>20%</div>"+
+                                "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+                                "<div><span class='square_pa'style='background-color: #2171b5'></span>5%</div>"+
+                                "<div><span class='square_pa'style='background-color: #6baed6'></span>10%</div>"+
+                                "<div><span class='square_pa'style='background-color: #c6dbef'></span>20%</div>"+
                                 "<div><span class='square_pa'style='background-color: #f7f7f7'></span>30%</div>"+
                                 "<div><span class='square_pa'style='background-color: #e6f5d0'></span>40%</div>"+
                                 "<div><span class='square_pa'style='background-color: #b8e186'></span>50%</div>"+
@@ -1180,13 +1180,13 @@ layer_country.addEventListener('change', function() {
                                   map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                                     map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                                     ['interpolate',['linear'],['get', layer_country_value],
-                                    0, '#c51b7d',30, '#de77ae',40, '#f1b6da',50, '#fde0ef',60, '#f7f7f7',70, '#e6f5d0',80, '#b8e186',90, '#7fbc41',100, '#4d9221',
+                                    0, '#08306b',30, '#2171b5',40, '#6baed6',50, '#c6dbef',60, '#f7f7f7',70, '#e6f5d0',80, '#b8e186',90, '#7fbc41',100, '#4d9221',
                                   ]);
                                   $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Natural Area (% of land area)</p>"+
-                                  "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-                                  "<div><span class='square_pa'style='background-color: #de77ae'></span>30%</div>"+
-                                  "<div><span class='square_pa'style='background-color: #f1b6da'></span>40%</div>"+
-                                  "<div><span class='square_pa'style='background-color: #fde0ef'></span>50%</div>"+
+                                  "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+                                  "<div><span class='square_pa'style='background-color: #2171b5'></span>30%</div>"+
+                                  "<div><span class='square_pa'style='background-color: #6baed6'></span>40%</div>"+
+                                  "<div><span class='square_pa'style='background-color: #c6dbef'></span>50%</div>"+
                                   "<div><span class='square_pa'style='background-color: #f7f7f7'></span>60%</div>"+
                                   "<div><span class='square_pa'style='background-color: #e6f5d0'></span>70%</div>"+
                                   "<div><span class='square_pa'style='background-color: #b8e186'></span>80%</div>"+
@@ -1198,13 +1198,13 @@ layer_country.addEventListener('change', function() {
                                     map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                                       map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                                       ['interpolate',['linear'],['get', layer_country_value],
-                                      0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',10, '#f7f7f7',20, '#e6f5d0',30, '#b8e186',40, '#7fbc41',50, '#4d9221',
+                                      0, '#08306b',1, '#2171b5',2, '#6baed6',5, '#c6dbef',10, '#f7f7f7',20, '#e6f5d0',30, '#b8e186',40, '#7fbc41',50, '#4d9221',
                                     ]);
                                     $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Degraded land (% of land area)</p>"+
-                                    "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-                                    "<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-                                    "<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-                                    "<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+                                    "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+                                    "<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+                                    "<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+                                    "<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
                                     "<div><span class='square_pa'style='background-color: #f7f7f7'></span>10%</div>"+
                                     "<div><span class='square_pa'style='background-color: #e6f5d0'></span>20%</div>"+
                                     "<div><span class='square_pa'style='background-color: #b8e186'></span>30%</div>"+
@@ -1314,14 +1314,14 @@ $('.country_select').click(function() {
     map.setFilter("wdpa_high2", ["in", "id", "xxx"]);
     map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
     ['interpolate',['linear'],['get', 'prot_perc_ind'],
-    0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
+    0, '#08306b',1, '#2171b5',2, '#6baed6',5, '#c6dbef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
   ]);
     $('#pa_title').hide();
     $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Overall Protection</p>"+
-    "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-    "<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-    "<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-    "<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+    "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+    "<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+    "<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+    "<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
     "<div><span class='square_pa'style='background-color: #f7f7f7'></span>8%</div>"+
     "<div><span class='square_pa'style='background-color: #e6f5d0'></span>12%</div>"+
     "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
@@ -1374,10 +1374,10 @@ $('.ecoregion_select').click(function() {
     map.setFilter("wdpa_high2", ["in", "id", "xxx"]);
     $('#pa_title').hide();
     $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Ecoregion Protection</p>"+
-    "<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-    "<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-    "<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-    "<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+    "<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+    "<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+    "<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+    "<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
     "<div><span class='square_pa'style='background-color: #f7f7f7'></span>8%</div>"+
     "<div><span class='square_pa'style='background-color: #e6f5d0'></span>12%</div>"+
     "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
@@ -1442,10 +1442,10 @@ $('.pa_select').click(function() {
 })
 
 $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Overall Protection</p>"+
-"<div><span class='square_pa'style='background-color: #c51b7d'></span>0%</div>"+
-"<div><span class='square_pa'style='background-color: #de77ae'></span>1%</div>"+
-"<div><span class='square_pa'style='background-color: #f1b6da'></span>2%</div>"+
-"<div><span class='square_pa'style='background-color: #fde0ef'></span>5%</div>"+
+"<div><span class='square_pa'style='background-color: #08306b'></span>0%</div>"+
+"<div><span class='square_pa'style='background-color: #2171b5'></span>1%</div>"+
+"<div><span class='square_pa'style='background-color: #6baed6'></span>2%</div>"+
+"<div><span class='square_pa'style='background-color: #c6dbef'></span>5%</div>"+
 "<div><span class='square_pa'style='background-color: #f7f7f7'></span>8%</div>"+
 "<div><span class='square_pa'style='background-color: #e6f5d0'></span>12%</div>"+
 "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
