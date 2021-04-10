@@ -792,11 +792,12 @@ if (classname=='news'){
               [12, '#e6f5d0'],
               [17, '#b8e186'],
               [30, '#7fbc41'],
-              [50, '#4d9221']
+              [50, '#4d9221'],
+            
             ]
           },
           'fill-opacity': 0.8
-        }
+        }, 'filter': [">", "prot_perc_ind",0],
   
     }, 'waterway-label');
 
@@ -888,7 +889,7 @@ layer_country.addEventListener('change', function() {
 
 }else if (layer_country_value =='prot_terr_perc_ind') {
 
-  map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+  map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
     map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
     ['interpolate',['linear'],['get', layer_country_value],
     0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
@@ -906,7 +907,7 @@ layer_country.addEventListener('change', function() {
   "</div>");
   }else if (layer_country_value =='protconn_ind') {
 
-    map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+    map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
       map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
       ['interpolate',['linear'],['get', layer_country_value],
       0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
@@ -924,7 +925,7 @@ layer_country.addEventListener('change', function() {
     "</div>");
     } else if (layer_country_value =='prot_perc_ind') {
 
-      map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+      map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
         map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
         ['interpolate',['linear'],['get', layer_country_value],
         0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#7fbc41',50, '#4d9221',
@@ -942,7 +943,7 @@ layer_country.addEventListener('change', function() {
       "</div>");
       } else if (layer_country_value =='forest_perc_ind') {
 
-        map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+        map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
           map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
           ['interpolate',['linear'],['get', layer_country_value],
           0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',8, '#f7f7f7',12, '#e6f5d0',17, '#b8e186',30, '#4d9221',50, '#4d9221',
@@ -960,7 +961,7 @@ layer_country.addEventListener('change', function() {
         "</div>");
         }else if (layer_country_value =='forest_gain_perc_ind') {
 
-          map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+          map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
             map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
             ['interpolate',['linear'],['get', layer_country_value],
             0, '#c51b7d',0.2, '#de77ae',0.4, '#f1b6da',0.6, '#fde0ef',0.8, '#f7f7f7',1, '#e6f5d0',1.2, '#b8e186',1.4, '#7fbc41',2, '#4d9221',
@@ -978,7 +979,7 @@ layer_country.addEventListener('change', function() {
           "</div>");
           }else if (layer_country_value =='forest_loss_perc_ind') {
 
-            map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+            map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
               map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
               ['interpolate',['linear'],['get', layer_country_value],
               0, '#c51b7d',1, '#de77ae',2, '#f1b6da',3, '#fde0ef',4, '#f7f7f7',5, '#e6f5d0',6, '#b8e186',7, '#7fbc41',8, '#4d9221',
@@ -996,7 +997,7 @@ layer_country.addEventListener('change', function() {
             "</div>");
             }else if (layer_country_value =='water_p_netchange_perc_ind') {
 
-              map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+              map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                 map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                 ['interpolate',['linear'],['get', layer_country_value],
                 -10, '#c51b7d',-5, '#de77ae',0, '#f1b6da',5, '#fde0ef',10, '#f7f7f7',15, '#e6f5d0',20, '#b8e186',25, '#7fbc41',30, '#4d9221',
@@ -1014,7 +1015,7 @@ layer_country.addEventListener('change', function() {
               "</div>");
               }else if (layer_country_value =='tot_carbon_ind') {
 
-                map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                   map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                   ['interpolate',['linear'],['get', layer_country_value],
                   0, '#c51b7d',0.5, '#de77ae',1, '#f1b6da',1.5, '#fde0ef',2, '#f7f7f7',2.5, '#e6f5d0',3, '#b8e186',4, '#7fbc41',5, '#4d9221',
@@ -1032,7 +1033,7 @@ layer_country.addEventListener('change', function() {
                 "</div>");
                 }else if (layer_country_value =='tot_species_ind') {
 
-                  map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                  map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                     map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                     ['interpolate',['linear'],['get', layer_country_value],
                     0, '#c51b7d',250, '#de77ae',500, '#f1b6da',1000, '#fde0ef',1500, '#f7f7f7',2000, '#e6f5d0',3000, '#b8e186',4000, '#7fbc41',5000, '#4d9221',
@@ -1050,7 +1051,7 @@ layer_country.addEventListener('change', function() {
                   "</div>");
                   }else if (layer_country_value =='species_endem_ind') {
 
-                    map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                    map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                       map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                       ['interpolate',['linear'],['get', layer_country_value],
                       0, '#c51b7d',10, '#de77ae',25, '#f1b6da',50, '#fde0ef',100, '#f7f7f7',150, '#e6f5d0',200, '#b8e186',500, '#7fbc41',1000, '#4d9221',
@@ -1068,7 +1069,7 @@ layer_country.addEventListener('change', function() {
                     "</div>");
                     }else if (layer_country_value =='threat_species_ind') {
 
-                      map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                      map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                         map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                         ['interpolate',['linear'],['get', layer_country_value],
                         0, '#c51b7d',5, '#de77ae',10, '#f1b6da',20, '#fde0ef',40, '#f7f7f7',60, '#e6f5d0',100, '#b8e186',200, '#7fbc41',300, '#4d9221',
@@ -1086,7 +1087,7 @@ layer_country.addEventListener('change', function() {
                       "</div>");
                       }else if (layer_country_value =='species_endem_threat_ind') {
 
-                        map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                        map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                           map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                           ['interpolate',['linear'],['get', layer_country_value],
                           0, '#c51b7d',5, '#de77ae',10, '#f1b6da',20, '#fde0ef',40, '#f7f7f7',60, '#e6f5d0',100, '#b8e186',200, '#7fbc41',300, '#4d9221',
@@ -1104,7 +1105,7 @@ layer_country.addEventListener('change', function() {
                         "</div>");
                         }else if (layer_country_value =='tot_pop_ind') {
 
-                          map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                          map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                             map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                             ['interpolate',['linear'],['get', layer_country_value],
                             0, '#c51b7d',10000000, '#de77ae',20000000, '#f1b6da',50000000, '#fde0ef',100000000, '#f7f7f7',250000000, '#e6f5d0',500000000, '#b8e186',750000000, '#7fbc41',1000000000, '#4d9221',
@@ -1122,7 +1123,7 @@ layer_country.addEventListener('change', function() {
                           "</div>");
                           }else if (layer_country_value =='dens_pop_ind') {
 
-                            map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                            map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                               map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                               ['interpolate',['linear'],['get', layer_country_value],
                               0, '#c51b7d',10, '#de77ae',25, '#f1b6da',50, '#fde0ef',75, '#f7f7f7',100, '#e6f5d0',150, '#b8e186',200, '#7fbc41',250, '#4d9221',
@@ -1140,7 +1141,7 @@ layer_country.addEventListener('change', function() {
                             "</div>");
                             }else if (layer_country_value =='growth_pop_ind') {
 
-                              map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                              map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                                 map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                                 ['interpolate',['linear'],['get', layer_country_value],
                                 -2, '#c51b7d',-1.5, '#de77ae',-1, '#f1b6da',0, '#fde0ef',1, '#f7f7f7',1.5, '#e6f5d0',2, '#b8e186',2.5, '#7fbc41',3, '#4d9221',
@@ -1158,7 +1159,7 @@ layer_country.addEventListener('change', function() {
                               "</div>");
                               }else if (layer_country_value =='agri_area_ind') {
 
-                                map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                                map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                                   map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                                   ['interpolate',['linear'],['get', layer_country_value],
                                   0, '#c51b7d',5, '#de77ae',10, '#f1b6da',20, '#fde0ef',30, '#f7f7f7',40, '#e6f5d0',50, '#b8e186',60, '#7fbc41',70, '#4d9221',
@@ -1176,7 +1177,7 @@ layer_country.addEventListener('change', function() {
                                 "</div>");
                                 }else if (layer_country_value =='land_natural_perc_ind') {
 
-                                  map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                                  map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                                     map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                                     ['interpolate',['linear'],['get', layer_country_value],
                                     0, '#c51b7d',30, '#de77ae',40, '#f1b6da',50, '#fde0ef',60, '#f7f7f7',70, '#e6f5d0',80, '#b8e186',90, '#7fbc41',100, '#4d9221',
@@ -1194,7 +1195,7 @@ layer_country.addEventListener('change', function() {
                                   "</div>");
                                   }else if (layer_country_value =='land_degradation_ind') {
 
-                                    map.setFilter("dopa_geoserver_global_dash", ["!in", "prot_mar_perc_ind", 'XXX']);
+                                    map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
                                       map.setPaintProperty('dopa_geoserver_global_dash', 'fill-color', 
                                       ['interpolate',['linear'],['get', layer_country_value],
                                       0, '#c51b7d',1, '#de77ae',2, '#f1b6da',5, '#fde0ef',10, '#f7f7f7',20, '#e6f5d0',30, '#b8e186',40, '#7fbc41',50, '#4d9221',
@@ -1305,7 +1306,7 @@ $('.country_select').click(function() {
   }else{
     $('.country_select').addClass('clickedtool');
     map.setFilter("dopa_geoserver_ecoregions_master_201905", ["in", "id", "xxx"]);
-    map.setFilter("dopa_geoserver_global_dash", ["!in", "id", "xxx"]);
+    map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",0]);
     map.setFilter("dopa_geoserver_wdpa_master_202101_o1", ["in", "id", "xxx"]);
     map.setFilter("country_high", ["in", "id", "xxx"]);
     map.setFilter("ecoregion_high", ["in", "id", "xxx"]);
