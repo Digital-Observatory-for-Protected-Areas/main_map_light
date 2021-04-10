@@ -1,5 +1,5 @@
 .clickedtool{
-  background-color: #7fbb41!important;
+  background-color: #044494!important;
   color: #ffffff!important;
 }
 .search_icon{
@@ -244,18 +244,17 @@ display: none;
 .live_title{
   font-family: 'Montserrat';
   font-size: 20px;
-  color: #1e1f1f;
+  color: #044494;
   padding-bottom: 10px;
   padding-top: 10px;
   background-color: #f0f0f0;
   padding-left: 10px;
-  border: 1px solid #f0f0f0;
 }
 .live_layer{
   font-family: 'Montserrat';
   font-size: 13px;
   font-weight: 100;
-  color: #1f2020;
+  color: #4e6775;
   cursor: pointer;
   padding: 7px;
   border: 1px solid #f6f4f4;
