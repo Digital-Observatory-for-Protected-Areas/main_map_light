@@ -266,7 +266,17 @@ display: none;
   background: #939fa0!important;
   border-radius: 0;
 }
-
+.mapboxgl-popup-content {
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+  padding: 10px 10px 15px;
+  pointer-events: auto;
+  max-width: 300px!important;
+  max-height: 350px!important;
+  overflow: auto!important;
+}
 #live_layer_container{
   position: absolute;
   background-color: #f6f4f4;
