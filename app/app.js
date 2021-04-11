@@ -3,13 +3,7 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
-  $('.all_tools').click(function() {
-    $('.pa_select').toggle();
-    $('.country_select').toggle();
-    $('.ecoregion_select').toggle();
-    $('.live_select').toggle();
-    $('.search_icon').toggle();
-})
+
 
 
   $(document).ready(function(){
@@ -163,7 +157,16 @@ var map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl());
 
+map.scrollZoom.disable();
 
+$('.all_tools').click(function() {
+  $('.pa_select').toggle();
+  $('.country_select').toggle();
+  $('.ecoregion_select').toggle();
+  $('.live_select').toggle();
+  $('.search_icon').toggle();
+  map.scrollZoom.enable();
+})
 
 
 var geocoder = new MapboxGeocoder({
