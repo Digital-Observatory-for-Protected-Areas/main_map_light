@@ -2645,6 +2645,29 @@ rangeSlidercountry();
               }
 
 
+              var pa_bb_url = "https://geospatial.jrc.ec.europa.eu/geoserver/wfs?request=getfeature&version=1.0.0&service=wfs&typename=dopa_explorer_3:dopa_geoserver_ecoregions_master_201905&propertyname=id,&SORTBY=id&CQL_FILTER=id='"+e.features[0].properties.id+"'&outputFormat=application%2Fjson";
+     
+              $.ajax({
+                  url: pa_bb_url,
+                  dataType: 'json',
+                  success: function(d) {
+                     
+                          var bbox = [];
+                          console.log(d.features[0].properties.bbox[0]);
+                          
+                          var x1 = d.features[0].properties.bbox[0];
+                          var x2 = d.features[0].properties.bbox[1];
+                          var x3 = d.features[0].properties.bbox[2];
+                          var x4 = d.features[0].properties.bbox[3];
+      
+      
+                          map.fitBounds([[x3,x4],[x1,x2]], {padding: {top: 200, bottom:200, left: 205, right: 5}})
+         
+      
+                        
+                    },
+                });
+
             new mapboxgl.Popup()
             .setLngLat(e.lngLat)
             .setHTML('<a href="https://dopa.gis-ninja.eu/ecoregion/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.eco_name+'</a><br><div class = "marine_eco">'+marine+'</div>'+
