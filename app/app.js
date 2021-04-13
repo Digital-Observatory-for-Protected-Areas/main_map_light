@@ -733,43 +733,34 @@ if (classname=='news'){
 
       map.addLayer({
         "id": "wdpa_high",
-        "type": "fill",
+        "type": "line",
         "source": {
             "type": "vector",
             "tiles": ["https://geospatial.jrc.ec.europa.eu/geoserver/gwc/service/wmts?layer=dopa_explorer_3:dopa_geoserver_wdpa_master_202101_o1&tilematrixset=EPSG:900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=application/x-protobuf;type=mapbox-vector&TileMatrix=EPSG:900913:{z}&TileCol={x}&TileRow={y}"]
             },
         "source-layer": "dopa_geoserver_wdpa_master_202101_o1",
   
-        'paint': { 
-          'fill-color': [
-            'match',
-            ['get', 'marine'],
-            '0',
-            '#7fbc41',
-            '1',
-            '#b9cda5',
-            '2',
-            '#13a6ec',
-            /* other */ '#ccc'
-            ],
-            'fill-opacity': 1
-            }, 'filter': ["in", "wdpaid",'xxx'],
+        paint: {
+          'line-color': '#ffffff',
+          'line-width': 1.2,
+          'line-dasharray': [1, 1],
+        }, 'filter': ["in", "wdpaid",'xxx'],
   
     }, 'waterway-label');
 
     map.addLayer({
       "id": "wdpa_high2",
-      "type": "fill",
+      "type": "line",
       "source": {
           "type": "vector",
           "tiles": ["https://geospatial.jrc.ec.europa.eu/geoserver/gwc/service/wmts?layer=dopa_explorer_3:dopa_geoserver_wdpa_master_202101_o1&tilematrixset=EPSG:900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=application/x-protobuf;type=mapbox-vector&TileMatrix=EPSG:900913:{z}&TileCol={x}&TileRow={y}"]
           },
       "source-layer": "dopa_geoserver_wdpa_master_202101_o1",
 
-      'paint': {
-        'fill-color': 'white',
-        'fill-opacity': 0.3,
-        'fill-outline-color': 'white'
+      paint: {
+        'line-color': '#ffffff',
+        'line-width': 1.5,
+        'line-dasharray': [1, 1],
       }, 'filter': ["in", "wdpaid",'xxx'],
 
   }, 'waterway-label');
@@ -806,17 +797,17 @@ if (classname=='news'){
 
     map.addLayer({
       "id": "country_high",
-      "type": "fill",
+      "type": "line",
       "source": {
           "type": "vector",
           "tiles": ["https://geospatial.jrc.ec.europa.eu/geoserver/gwc/service/wmts?layer=dopa_explorer_3:dopa_geoserver_global_dash&tilematrixset=EPSG:900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=application/x-protobuf;type=mapbox-vector&TileMatrix=EPSG:900913:{z}&TileCol={x}&TileRow={y}"]
           },
       "source-layer": "dopa_geoserver_global_dash",
 
-      'paint': {
-        'fill-color': 'white',
-        'fill-opacity': 0.1,
-        'fill-outline-color': 'white'
+      paint: {
+        'line-color': '#ffffff',
+        'line-width': 1,
+        
       }, 'filter': ["in", "wdpaid",'xxx'],
 
   }, 'waterway-label');
@@ -852,17 +843,17 @@ if (classname=='news'){
 
   map.addLayer({
     "id": "ecoregion_high",
-    "type": "fill",
+    "type": "line",
     "source": {
         "type": "vector",
         "tiles": ["https://geospatial.jrc.ec.europa.eu/geoserver/gwc/service/wmts?layer=dopa_explorer_3:dopa_geoserver_ecoregions_master_201905&tilematrixset=EPSG:900913&Service=WMTS&Request=GetTile&Version=1.0.0&Format=application/x-protobuf;type=mapbox-vector&TileMatrix=EPSG:900913:{z}&TileCol={x}&TileRow={y}"]
         },
     "source-layer": "dopa_geoserver_ecoregions_master_201905",
 
-    'paint': {
-      'fill-color': 'white',
-      'fill-opacity': 0.1,
-      'fill-outline-color': 'white'
+    paint: {
+      'line-color': '#ffffff',
+      'line-width': 1,
+     
     }, 'filter': ["in", "wdpaid",'xxx'],
 
 }, 'waterway-label');
@@ -887,8 +878,9 @@ layer_country.addEventListener('change', function() {
   "<div><span class='square_pa'style='background-color: #b8e186'></span>12%</div>"+
   "<div><span class='square_pa'style='background-color: #7fbc41'></span>17%</div>"+
   "<div><span class='square_pa'style='background-color: #4d9221'></span>30% or more</div>"+
-  "</div>");
-  
+  "</div>"+
+  "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
+
 
 }else if (layer_country_value =='prot_terr_perc_ind') {
 
@@ -907,7 +899,8 @@ layer_country.addEventListener('change', function() {
   "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
   "<div><span class='square_pa'style='background-color: #7fbc41'></span>30%</div>"+
   "<div><span class='square_pa'style='background-color: #4d9221'></span>50% or more</div>"+
-  "</div>");
+  "</div>"+
+  "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
   }else if (layer_country_value =='protconn_ind') {
 
     map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -925,7 +918,8 @@ layer_country.addEventListener('change', function() {
     "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
     "<div><span class='square_pa'style='background-color: #7fbc41'></span>30%</div>"+
     "<div><span class='square_pa'style='background-color: #4d9221'></span>50% or more</div>"+
-    "</div>");
+    "</div>"+
+    "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
     } else if (layer_country_value =='prot_perc_ind') {
 
       map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -943,7 +937,8 @@ layer_country.addEventListener('change', function() {
       "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
       "<div><span class='square_pa'style='background-color: #7fbc41'></span>30%</div>"+
       "<div><span class='square_pa'style='background-color: #4d9221'></span>50% or more</div>"+
-      "</div>");
+      "</div>"+
+      "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
       } else if (layer_country_value =='forest_perc_ind') {
 
         map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -961,7 +956,8 @@ layer_country.addEventListener('change', function() {
         "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
         "<div><span class='square_pa'style='background-color: #7fbc41'></span>30%</div>"+
         "<div><span class='square_pa'style='background-color: #4d9221'></span>50% or more</div>"+
-        "</div>");
+        "</div>"+
+        "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
         }else if (layer_country_value =='forest_gain_perc_ind') {
 
           map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -979,7 +975,8 @@ layer_country.addEventListener('change', function() {
           "<div><span class='square_pa'style='background-color: #b8e186'></span>1.2%</div>"+
           "<div><span class='square_pa'style='background-color: #7fbc41'></span>1.4%</div>"+
           "<div><span class='square_pa'style='background-color: #4d9221'></span>2.0% or more</div>"+
-          "</div>");
+          "</div>"+
+          "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
           }else if (layer_country_value =='forest_loss_perc_ind') {
 
             map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -997,7 +994,8 @@ layer_country.addEventListener('change', function() {
             "<div><span class='square_pa'style='background-color: #b8e186'></span>6%</div>"+
             "<div><span class='square_pa'style='background-color: #7fbc41'></span>7%</div>"+
             "<div><span class='square_pa'style='background-color: #4d9221'></span>8% or more</div>"+
-            "</div>");
+            "</div>"+
+            "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
             }else if (layer_country_value =='water_p_netchange_perc_ind') {
 
               map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1015,7 +1013,8 @@ layer_country.addEventListener('change', function() {
               "<div><span class='square_pa'style='background-color: #b8e186'></span>20%</div>"+
               "<div><span class='square_pa'style='background-color: #7fbc41'></span>25%</div>"+
               "<div><span class='square_pa'style='background-color: #4d9221'></span>30% or more</div>"+
-              "</div>");
+              "</div>"+
+              "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
               }else if (layer_country_value =='tot_carbon_ind') {
 
                 map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1033,7 +1032,8 @@ layer_country.addEventListener('change', function() {
                 "<div><span class='square_pa'style='background-color: #b8e186'></span>3</div>"+
                 "<div><span class='square_pa'style='background-color: #7fbc41'></span>4</div>"+
                 "<div><span class='square_pa'style='background-color: #4d9221'></span>5 or more</div>"+
-                "</div>");
+                "</div>"+
+                "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                 }else if (layer_country_value =='tot_species_ind') {
 
                   map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1051,7 +1051,8 @@ layer_country.addEventListener('change', function() {
                   "<div><span class='square_pa'style='background-color: #b8e186'></span>3000</div>"+
                   "<div><span class='square_pa'style='background-color: #7fbc41'></span>4000</div>"+
                   "<div><span class='square_pa'style='background-color: #4d9221'></span>5000 or more</div>"+
-                  "</div>");
+                  "</div>"+
+                  "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                   }else if (layer_country_value =='species_endem_ind') {
 
                     map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1069,7 +1070,8 @@ layer_country.addEventListener('change', function() {
                     "<div><span class='square_pa'style='background-color: #b8e186'></span>200</div>"+
                     "<div><span class='square_pa'style='background-color: #7fbc41'></span>500</div>"+
                     "<div><span class='square_pa'style='background-color: #4d9221'></span>1000 or more</div>"+
-                    "</div>");
+                    "</div>"+
+                    "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                     }else if (layer_country_value =='threat_species_ind') {
 
                       map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1087,7 +1089,8 @@ layer_country.addEventListener('change', function() {
                       "<div><span class='square_pa'style='background-color: #b8e186'></span>100</div>"+
                       "<div><span class='square_pa'style='background-color: #7fbc41'></span>200</div>"+
                       "<div><span class='square_pa'style='background-color: #4d9221'></span>300 or more</div>"+
-                      "</div>");
+                      "</div>"+
+                      "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                       }else if (layer_country_value =='species_endem_threat_ind') {
 
                         map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1105,7 +1108,8 @@ layer_country.addEventListener('change', function() {
                         "<div><span class='square_pa'style='background-color: #b8e186'></span>100</div>"+
                         "<div><span class='square_pa'style='background-color: #7fbc41'></span>200</div>"+
                         "<div><span class='square_pa'style='background-color: #4d9221'></span>300 or more</div>"+
-                        "</div>");
+                        "</div>"+
+                        "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                         }else if (layer_country_value =='tot_pop_ind') {
 
                           map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1123,7 +1127,8 @@ layer_country.addEventListener('change', function() {
                           "<div><span class='square_pa'style='background-color: #b8e186'></span>500M</div>"+
                           "<div><span class='square_pa'style='background-color: #7fbc41'></span>750M</div>"+
                           "<div><span class='square_pa'style='background-color: #4d9221'></span>1B or more</div>"+
-                          "</div>");
+                          "</div>"+
+                          "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                           }else if (layer_country_value =='dens_pop_ind') {
 
                             map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1141,7 +1146,8 @@ layer_country.addEventListener('change', function() {
                             "<div><span class='square_pa'style='background-color: #b8e186'></span>150 per km<sup>2</sup></div>"+
                             "<div><span class='square_pa'style='background-color: #7fbc41'></span>200 per km<sup>2</sup></div>"+
                             "<div><span class='square_pa'style='background-color: #4d9221'></span>250 per km<sup>2</sup> or more</div>"+
-                            "</div>");
+                            "</div>"+
+                            "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                             }else if (layer_country_value =='growth_pop_ind') {
 
                               map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1159,7 +1165,8 @@ layer_country.addEventListener('change', function() {
                               "<div><span class='square_pa'style='background-color: #b8e186'></span>2%</div>"+
                               "<div><span class='square_pa'style='background-color: #7fbc41'></span>2.5%</div>"+
                               "<div><span class='square_pa'style='background-color: #4d9221'></span>3% or more</div>"+
-                              "</div>");
+                              "</div>"+
+                              "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                               }else if (layer_country_value =='agri_area_ind') {
 
                                 map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1177,7 +1184,8 @@ layer_country.addEventListener('change', function() {
                                 "<div><span class='square_pa'style='background-color: #b8e186'></span>50%</div>"+
                                 "<div><span class='square_pa'style='background-color: #7fbc41'></span>60%</div>"+
                                 "<div><span class='square_pa'style='background-color: #4d9221'></span>70% or more</div>"+
-                                "</div>");
+                                "</div>"+
+                                "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                                 }else if (layer_country_value =='land_natural_perc_ind') {
 
                                   map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1195,7 +1203,8 @@ layer_country.addEventListener('change', function() {
                                   "<div><span class='square_pa'style='background-color: #b8e186'></span>80%</div>"+
                                   "<div><span class='square_pa'style='background-color: #7fbc41'></span>90%</div>"+
                                   "<div><span class='square_pa'style='background-color: #4d9221'></span>100%</div>"+
-                                  "</div>");
+                                  "</div>"+
+                                  "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                                   }else if (layer_country_value =='land_degradation_ind') {
 
                                     map.setFilter("dopa_geoserver_global_dash", [">", "prot_perc_ind",-1]);
@@ -1213,10 +1222,13 @@ layer_country.addEventListener('change', function() {
                                     "<div><span class='square_pa'style='background-color: #b8e186'></span>30%</div>"+
                                     "<div><span class='square_pa'style='background-color: #7fbc41'></span>40%</div>"+
                                     "<div><span class='square_pa'style='background-color: #4d9221'></span>50% or more</div>"+
-                                    "</div>");
+                                    "</div>"+
+                                    "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
                                     }
     
-  
+                               
+                                    rangeSlidercountry();
+                                    
 
 });
 
@@ -1277,9 +1289,14 @@ $('.search_icon').click(function() {
   "<div><span class='square_pa'style='background-color: #7fbc41'></span>Terrestrial</div>"+
   "<div><span class='square_pa'style='background-color: #b9cda5'></span>Coastal</div>"+
   "<div><span class='square_pa'style='background-color: #13a6ec'></span>Marine</div>"+
-  "</div>");
+  "</div>"+
+"<div><div><input id='slider-pa' type='range' min='0' max='100' step='0' value='100'></div></div>");
   $('#pa_stats').hide();
   $('#pa_title').hide();
+  
+  setTimeout(function(){
+    rangeSliderwdpa();
+  }, 500)
 
 })
 
@@ -1292,6 +1309,8 @@ $('.search_icon').click(function() {
 
 
 $('.country_select').click(function() {
+  
+
   if($('.country_select').hasClass('clickedtool')){
     $('.country_select').removeClass('clickedtool');
     map.setFilter("dopa_geoserver_ecoregions_master_201905", ["in", "id", "xxx"]);
@@ -1330,7 +1349,11 @@ $('.country_select').click(function() {
     "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
     "<div><span class='square_pa'style='background-color: #7fbc41'></span>30%</div>"+
     "<div><span class='square_pa'style='background-color: #4d9221'></span>50% or more</div>"+
-    "</div>");
+    "</div>"+
+    "<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>");
+    setTimeout(function(){
+      rangeSlidercountry();
+    }, 500)
     $('#pa_title').hide();
   $('#pa_stats').hide();
   $('#live_layer_container').hide();
@@ -1353,6 +1376,7 @@ $('.country_select').click(function() {
 
 
 $('.ecoregion_select').click(function() {
+
   if($('.ecoregion_select').hasClass('clickedtool')){
     $('.ecoregion_select').removeClass('clickedtool');
     map.setFilter("dopa_geoserver_ecoregions_master_201905", ["in", "id", "xxx"]);
@@ -1386,7 +1410,11 @@ $('.ecoregion_select').click(function() {
     "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
     "<div><span class='square_pa'style='background-color: #7fbc41'></span>30%</div>"+
     "<div><span class='square_pa'style='background-color: #4d9221'></span>50% or more</div>"+
-    "</div>");
+    "</div>"+
+    "<div><div><input id='slider-ecoregion' type='range' min='0' max='100' step='0' value='100'></div></div>");
+    setTimeout(function(){
+      rangeSliderecoregion();
+    }, 500)
     $('#country_var_dropdown').hide();
     $('#pa_stats').hide();
     $('#live_layer_container').hide();
@@ -1440,8 +1468,12 @@ $('.pa_select').click(function() {
   "<div><span class='square_pa'style='background-color: #7fbc41'></span>Terrestrial</div>"+
   "<div><span class='square_pa'style='background-color: #b9cda5'></span>Coastal</div>"+
   "<div><span class='square_pa'style='background-color: #13a6ec'></span>Marine</div>"+
-  "</div>");
+  "</div>"+
+  "<div><div><input id='slider-pa' type='range' min='0' max='100' step='0' value='100'></div></div>");
   $('#country_var_dropdown').hide();
+  setTimeout(function(){
+    rangeSliderwdpa();
+  }, 500)
 })
 
 $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_legend_title'>Overall Protection</p>"+
@@ -1454,8 +1486,11 @@ $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_lege
 "<div><span class='square_pa'style='background-color: #b8e186'></span>17%</div>"+
 "<div><span class='square_pa'style='background-color: #7fbc41'></span>30%</div>"+
 "<div><span class='square_pa'style='background-color: #4d9221'></span>50% or more</div>"+
-"</div>");
+"</div>"+
+"<div><div><input id='slider-country' type='range' min='0' max='100' step='0' value='100'></div></div>"
 
+);
+rangeSlidercountry();
 
  
 // PA Popup
@@ -1486,6 +1521,34 @@ $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_lege
         $('#pa_stats').show();
 
         map.setFilter("wdpa_high2", ["in", "wdpaid", e.features[0].properties.wdpaid]);
+
+
+
+
+        var pa_bb_url = "https://geospatial.jrc.ec.europa.eu/geoserver/wfs?request=getfeature&version=1.0.0&service=wfs&typename=dopa_explorer_3:dopa_geoserver_wdpa_master_202101_o1&propertyname=wdpaid,&SORTBY=wdpaid&CQL_FILTER=wdpaid='"+e.features[0].properties.wdpaid+"'&outputFormat=application%2Fjson";
+     
+        $.ajax({
+            url: pa_bb_url,
+            dataType: 'json',
+            success: function(d) {
+               
+                    var bbox = [];
+                    console.log(d.features[0].properties.bbox[0]);
+                    
+                    var x1 = d.features[0].properties.bbox[0];
+                    var x2 = d.features[0].properties.bbox[1];
+                    var x3 = d.features[0].properties.bbox[2];
+                    var x4 = d.features[0].properties.bbox[3];
+
+
+                    map.fitBounds([[x3,x4],[x1,x2]], {padding: {top: 200, bottom:200, left: 205, right: 5}})
+   
+
+                  
+              },
+          });
+
+
         var marine = e.features[0].properties.marine;
         var prod_base_url_services = 'https://dopa-services.jrc.ec.europa.eu/services/d6dopa40'
         var base_url_services = prod_base_url_services;
@@ -2328,6 +2391,7 @@ $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_lege
          
         map.on('mouseleave', 'dopa_geoserver_wdpa_master_202101_o1', function () {
         map.getCanvas().style.cursor = '';
+        map.setFilter("wdpa_high", ["in", "wdpaid", "xxx"]);
         });
         map.on("moveend", function () {
           var features = map.queryRenderedFeatures({ layers: ["dopa_geoserver_wdpa_master_202101_o1"] });
@@ -2371,7 +2435,11 @@ $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_lege
             "<div><span class='square_pa'style='background-color: #7fbc41'></span>Terrestrial</div>"+
             "<div><span class='square_pa'style='background-color: #b9cda5'></span>Coastal</div>"+
             "<div><span class='square_pa'style='background-color: #13a6ec'></span>Marine</div>"+
-            "</div>");
+            "</div>"+
+           "<div><div><input id='slider-pa' type='range' min='0' max='100' step='0' value='100'></div></div>"
+           
+        );
+        rangeSliderwdpa();
           }else{
 
           }
@@ -2418,11 +2486,7 @@ $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_lege
                          var x3 = d.features[0].properties.bbox[2];
                          var x4 = d.features[0].properties.bbox[3];
                         
-                         
-                         map.fitBounds([
-                            [x3,x4],
-                            [x1,x2]
-                          ])
+                         map.fitBounds([[x3,x4],[x1,x2]], {padding: {top: 100, bottom:40, left: 205, right: 5}})
         
  
                        
@@ -2529,6 +2593,7 @@ $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_lege
            
           map.on('mouseleave', 'dopa_geoserver_global_dash', function () {
           map.getCanvas().style.cursor = '';
+          map.setFilter("country_high", ["in", "iso2_digit", "xxx"]);
           });
 
           map.on("moveend", function () {
@@ -2597,6 +2662,7 @@ $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_lege
              
             map.on('mouseleave', 'dopa_geoserver_ecoregions_master_201905', function () {
             map.getCanvas().style.cursor = '';
+            map.setFilter("ecoregion_high", ["in", "id", "xxx"]);
             });
 
             map.on("moveend", function () {
@@ -2642,8 +2708,37 @@ $('.legend').html("<br><div id='country_prot_legend'> <p class='country_sel_lege
     }, 6000);
      
 
+    function rangeSliderwdpa() {
+      var slider = document.getElementById('slider-pa');
+      slider.addEventListener('input', function (e) {
+        map.setPaintProperty(
+        'dopa_geoserver_wdpa_master_202101_o1', 
+        'fill-opacity',
+        parseInt(e.target.value, 10) / 100
+        );
+      });
+    }
 
-
+    function rangeSlidercountry() {
+      var slider = document.getElementById('slider-country');
+      slider.addEventListener('input', function (e) {
+        map.setPaintProperty(
+        'dopa_geoserver_global_dash', 
+        'fill-opacity',
+        parseInt(e.target.value, 10) / 100
+        );
+      });
+    }
+    function rangeSliderecoregion() {
+      var slider = document.getElementById('slider-ecoregion');
+      slider.addEventListener('input', function (e) {
+        map.setPaintProperty(
+        'dopa_geoserver_ecoregions_master_201905', 
+        'fill-opacity',
+        parseInt(e.target.value, 10) / 100
+        );
+      });
+    }
 // Create a popup, but don't add it to the map yet.
 var popup = new mapboxgl.Popup({
 closeButton: false,

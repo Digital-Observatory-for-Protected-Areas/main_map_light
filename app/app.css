@@ -296,7 +296,7 @@ input[type=range]::-webkit-slider-runnable-track {
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     background: #e4eaec;
     border-radius: 2px;
-    border: 0px solid #f6f4f4;
+    border: 0px solid #4388b6;
   }
   .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
     -webkit-align-self: flex-start;
@@ -803,7 +803,7 @@ div.mapboxgl-popup-content > i
       top: -4px;
   }
   input[type=range]::-webkit-slider-thumb {
-    background-color: #e4eaec;
+    background-color: #4388b6;
   }
   #toast-container > div > p{
   font-size: 11px;
@@ -823,10 +823,10 @@ div.mapboxgl-popup-content > i
       color: #607379;
   }
   input[type=range]::-moz-range-thumb {
-    background-color: #e4eaec;
+    background-color: #4388b6;
   }
   input[type=range]::-ms-thumb {
-    background-color: #e4eaec;
+    background-color: #4388b6;
   }
   [type="checkbox"]:checked+span:not(.lever):before {
       top: -4px;
