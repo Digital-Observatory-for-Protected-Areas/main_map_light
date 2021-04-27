@@ -1552,9 +1552,9 @@ rangeSlidercountry();
         var marine = e.features[0].properties.marine;
         var prod_base_url_services = 'https://dopa-services.jrc.ec.europa.eu/services/d6dopa40'
         var base_url_services = prod_base_url_services;
-        var url = base_url_services +'/protected_sites/get_wdpa_terrestrial_radarplot?wdpaid=' + e.features[0].properties.wdpaid;
-        var url_marine = base_url_services +'/protected_sites/get_wdpa_marine_radarplot?wdpaid=' + e.features[0].properties.wdpaid;
-        var url_coastal = base_url_services +'/protected_sites/get_wdpa_terrestrial_radarplot?wdpaid=' +e.features[0].properties.wdpaid;
+        var url = 'https://rest-services.jrc.ec.europa.eu/services/d6dopa/dopa_41/get_de_wdpa_terrestrial_radarplot?format=json&wdpaid=' + e.features[0].properties.wdpaid;
+        var url_marine = 'https://rest-services.jrc.ec.europa.eu/services/d6dopa/dopa_41/get_de_wdpa_marine_radarplot?format=json&wdpaid=' + e.features[0].properties.wdpaid;
+        var url_coastal = 'https://rest-services.jrc.ec.europa.eu/services/d6dopa/dopa_41/get_de_wdpa_terrestrial_radarplot?format=json&wdpaid=' + e.features[0].properties.wdpaid;
         if (marine == '0'){
         $.ajax({
           url: url,
@@ -1945,7 +1945,7 @@ rangeSlidercountry();
                                 }
                                 break;
       
-                            case 'amphibians indicator':
+                            case 'Amphibians indicator':
                             for (var prop in data) {
                                     if (prop == 'title') {
                                         title.push("Amphibians")
@@ -1966,7 +1966,7 @@ rangeSlidercountry();
                                     }
                                 }
                                 break;
-                            case 'mammals indicator':
+                            case 'Mammals indicator':
       
                             for (var prop in data) {
                                     if (prop == 'title') {
@@ -1990,7 +1990,7 @@ rangeSlidercountry();
                                     }
                                 }
                                 break;
-                            case 'birds indicator':
+                            case 'Birds indicator':
                             for (var prop in data) {
                                     if (prop == 'title') {
                                         title.push("Birds")
@@ -2237,7 +2237,7 @@ rangeSlidercountry();
                                                 }
                                             }
                                             break;
-                            case 'mammals indicator':
+                            case 'Mammals indicator':
       
                             for (var prop in data) {
                                     if (prop == 'title') {
@@ -2253,7 +2253,7 @@ rangeSlidercountry();
                                     }
                                 }
                                 break;
-                            case 'birds indicator':
+                            case 'Birds indicator':
                             for (var prop in data) {
                                     if (prop == 'title') {
                                         title.push("Birds")
